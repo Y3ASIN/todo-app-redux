@@ -22,6 +22,7 @@ const reducer = (state = initialState, action) => {
           id: nextTodoId(state),
         },
       ];
+
     case TOGGLED:
       return state.map((todo) => {
         if (todo.id !== action.payload) return todo;
@@ -30,6 +31,7 @@ const reducer = (state = initialState, action) => {
           completed: !todo.completed,
         };
       });
+
     case COLORSELECTED:
       const { todoId, color } = action.payload;
       return state.map((todo) => {
@@ -39,8 +41,10 @@ const reducer = (state = initialState, action) => {
           color,
         };
       });
+
     case DELETED:
       return state.filter((todo) => todo.id !== action.payload);
+
     case ALLCOMPLETED:
       return state.map((todo) => {
         return {
@@ -48,11 +52,12 @@ const reducer = (state = initialState, action) => {
           completed: true,
         };
       });
+
     case CLEARCOMPLETED:
       return state.filter((todo) => !todo.completed);
 
     default:
-      break;
+      return state;
   }
 };
 

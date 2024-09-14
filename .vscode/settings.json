@@ -1,8 +1,6 @@
 {
-  "workbench.colorTheme": "Material Theme Darker",
+  "workbench.colorTheme": "Material Theme Palenight High Contrast",
   "workbench.preferredDarkColorTheme": "Andromeda Italic",
   "material-icon-theme.activeIconPack": "react_redux",
-  "material-icon-theme.files.associations": {
-    
-  }
+  "material-icon-theme.files.associations": {}
 }
